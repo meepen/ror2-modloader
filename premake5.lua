@@ -72,31 +72,3 @@ workspace "ror2-modloader"
         filter "configurations:Debug"
             defines "NDEBUG"
             optimize "Debug"
-
-    project "ModLoader Plugin Example"
-        kind "SharedLib"
-        language "C#"
-        dotnetframework "4.6"
-
-        libdirs {
-            ror2_dir .. "/Risk of Rain 2_Data/Managed",
-            "cs_libraries"
-        }
-        links {
-            "UnityEngine",
-            "UnityEngine.CoreModule",
-            "0Harmony",
-            "Assembly-CSharp",
-            "ModLoader"
-        }
-
-        targetdir "bin/Mods/"
-        targetname "example-mod"
-
-        files "example/**.cs"
-
-        filter "configurations:Release"
-            optimize "Full"
-
-        filter "configurations:Debug"
-            optimize "Debug"

@@ -11,8 +11,6 @@ namespace RoR2
     {
         public static void Init()
         {
-            RoR2Application.isModded = true;
-
             using (StreamWriter log = File.CreateText("./ror2-modloader.log"))
             {
                 log.WriteLine("Hello!");
