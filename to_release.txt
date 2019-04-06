@@ -1,0 +1,3 @@
+Risk of Rain 2_Data/Plugins/AkHarmonizer.dll
+Risk of Rain 2_Data/Managed/0Harmony.dll
+Risk of Rain 2_Data/Managed/ror2-modloader.dll

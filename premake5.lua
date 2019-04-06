@@ -21,7 +21,6 @@ workspace "ror2-modloader"
     configurations { "Debug", "Release" }
     location "project"
 
-
     project "ModLoader"
         kind "SharedLib"
         language "C#"
@@ -63,6 +62,29 @@ workspace "ror2-modloader"
             "loader/**.c", 
             "loader/**.h", 
             "loader/**.hpp"
+        }
+
+        filter "configurations:Release"
+            defines "DEBUG"
+            optimize "Full"
+
+        filter "configurations:Debug"
+            defines "NDEBUG"
+            optimize "Debug"
+
+    project "Ready for Release"
+        kind "ConsoleApp"
+        language "C#"
+
+        targetdir "."
+        targetname "readyrelease"
+
+        files {
+            "build/**.cs"
+        }
+
+        links {
+            "System.IO.Compression.FileSystem"
         }
 
         filter "configurations:Release"

@@ -11,12 +11,19 @@ namespace RoR2
     {
         public static void Init()
         {
-            RoR2Application.isModded = true;
             using (StreamWriter log = File.CreateText("./ror2-modloader.log"))
             {
+                if (File.Exists("./DISABLE_MODLOADER.txt"))
+                {
+                    log.WriteLine("DISABLE_MODLOADER.txt found, not loading.");
+                    return;
+                }
+                RoR2Application.isModded = true;
                 log.WriteLine("Hello!");
                 try
                 {
+                    if (!Directory.Exists("./Mods/"))
+                        Directory.CreateDirectory("./Mods/");
                     var mods = Directory.GetFiles("./Mods/");
                     foreach (var mod in mods)
                     {

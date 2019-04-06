@@ -1,6 +1,6 @@
 1. Go to your Risk of Rain 2 install directory
 2. Go to Risk of Rain 2_Data/Plugins
 3. Rename AkHarmonizer to AkHarmonizer_Original
-4. Go back to your install directory
+4. Go back to your Risk of Rain 2 install directory
 5. Place all these files there and replace any that already exist
 6. You're done! Install mods in the Mods folder.
