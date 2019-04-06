@@ -1,3 +1,4 @@
 1. Go to your Risk of Rain 2 install folder (normally C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2)
 2. Move everything inside the folder called "release" from this download into Risk of Rain 2's install folder
 3. Run ror2-modloader-manager inside the Risk of Rain 2 install folder
+4. Done! To install mods put them in the Mods folder in your Risk of Rain 2 install folder
