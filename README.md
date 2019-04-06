@@ -10,7 +10,7 @@ After the first step, build or download the [Latest Release](https://github.com/
 To install mods afterwards, just place them in your `Mods` folder in `Risk of Rain 2`!
 
 
-## Why do I include a mscorlib.dll?
+## Why do this include a mscorlib.dll?
 
 These are required to provide Reflection.Emit, as the .NET Standard shipped with the game does not support it. These are taken from Unity's Editor for 4.5. They can be found in `net4.5` and must be put in the `Managed` folder if you build this yourself.
 

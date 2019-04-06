@@ -1,3 +1,7 @@
-Risk of Rain 2_Data/Plugins/AkHarmonizer.dll
+Risk of Rain 2_Data/Plugins/AkHarmonizer_Modded.dll
+Risk of Rain 2_Data/Plugins/AkHarmonizer_Modded.pdb
 Risk of Rain 2_Data/Managed/0Harmony.dll
 Risk of Rain 2_Data/Managed/ror2-modloader.dll
+Risk of Rain 2_Data/Managed/ror2-modloader.pdb
+ror2-modloader-manager.exe
+ror2-modloader-manager.pdb

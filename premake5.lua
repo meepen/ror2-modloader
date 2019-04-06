@@ -55,7 +55,7 @@ workspace "ror2-modloader"
         characterset "MBCS"
 
         targetdir "bin/Risk of Rain 2_Data/Plugins/"
-        targetname "AkHarmonizer"
+        targetname "AkHarmonizer_Modded"
 
         files { 
             "loader/**.cpp", 
@@ -81,6 +81,29 @@ workspace "ror2-modloader"
 
         files {
             "build/**.cs"
+        }
+
+        links {
+            "System.IO.Compression.FileSystem"
+        }
+
+        filter "configurations:Release"
+            defines "DEBUG"
+            optimize "Full"
+
+        filter "configurations:Debug"
+            defines "NDEBUG"
+            optimize "Debug"
+
+    project "ModLoader Manager"
+        kind "ConsoleApp"
+        language "C#"
+
+        targetdir "bin"
+        targetname "ror2-modloader-manager"
+
+        files {
+            "install/**.cs"
         }
 
         links {
