@@ -24,11 +24,20 @@ namespace RoR2
                 {
                     if (!Directory.Exists("./Mods/"))
                         Directory.CreateDirectory("./Mods/");
-                    var mods = Directory.GetFiles("./Mods/");
+                    var mods = Directory.GetFiles("./Mods/", "*.dll");
                     foreach (var mod in mods)
                     {
+                        Assembly module;
+                        try
+                        {
+                            module = Assembly.LoadFile(mod);
+                        }
+                        catch (Exception)
+                        {
+                            continue;
+                        }
+
                         log.WriteLine("Found mod file " + mod);
-                        var module = Assembly.LoadFile(mod);
                         foreach (var method in module.GetTypes().SelectMany(t => t.GetMethods()).Where(m => m.IsStatic && m.GetCustomAttributes(typeof(Mods.ModEntry), false).Length != 0))
                         {
                             var attr = method.GetCustomAttribute<Mods.ModEntry>(false);
