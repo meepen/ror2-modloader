@@ -34,7 +34,11 @@ workspace "ror2-modloader"
             "UnityEngine",
             "UnityEngine.CoreModule",
             "0Harmony",
-            "Assembly-CSharp"
+            "Assembly-CSharp",
+            "System",
+            "System.ComponentModel.Primitives",
+            "netstandard",
+            "System.Collections"
         }
 
         targetdir "bin/Risk of Rain 2_Data/Managed/"
